@@ -1,0 +1,148 @@
+:root {
+  --primary: #2d8cff;
+  --accent: #fecd1a;
+  --bg: #f9f9f9;
+  --text: #222;
+  --card-bg: #fff;
+  --card-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--primary);
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 60%, var(--accent));
+  color: #fff;
+  padding: 4rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.hero .accent {
+  color: var(--accent);
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.skills-list li {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#projects .projects-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.project-card {
+  background: var(--bg);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  padding: 1rem 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 5px solid var(--primary);
+}
+
+.project-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(45,140,255,0.13);
+}
+
+.project-title {
+  color: var(--primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.project-desc {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  background: none;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  section {
+    padding: 1rem;
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
